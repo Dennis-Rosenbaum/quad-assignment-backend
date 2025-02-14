@@ -2,12 +2,14 @@ package quad.assignmentbackend.trivia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import quad.assignmentbackend.trivia.externalmodels.TriviaQuestion;
 import quad.assignmentbackend.trivia.externalmodels.TriviaResponse;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@ActiveProfiles("test")
 public class TriviaResponseTests {
 
     @Test
