@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource("classpath:application-ci.properties")
+@PropertySource(value = "classpath:application-ci.properties", ignoreResourceNotFound = true)
 public class QuadAssessmentBackendApplication {
 
     public static void main(String[] args) {
