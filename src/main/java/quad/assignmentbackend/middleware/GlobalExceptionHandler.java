@@ -5,6 +5,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import quad.assignmentbackend.exceptions.ExternalServiceException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,5 +23,13 @@ public class GlobalExceptionHandler {
         );
 
         return errors;
+    }
+
+    @ExceptionHandler(ExternalServiceException.class)
+    @ResponseStatus(HttpStatus.FAILED_DEPENDENCY)
+    public Map<String, String> handleDependencyExceptions(ExternalServiceException ex) {
+        Map<String, String> error = new HashMap<>();
+        error.put("error", ex.getMessage());
+        return error;
     }
 }

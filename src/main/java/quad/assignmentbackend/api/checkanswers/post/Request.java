@@ -1,21 +1,20 @@
 package quad.assignmentbackend.api.checkanswers.post;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class Request {
 
     @NotNull(message = "Question ID is required")
-    private Integer questionId;
+    private String questionId;
 
-    @NotNull(message = "Answer is required")
-    private String answer;
+    @NotNull(message = "Answer ID is required")
+    private String answerId;
 
-    public Integer getQuestionId() {
+    public String getQuestionId() {
         return questionId;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getAnswerId() {
+        return answerId;
     }
 }
