@@ -29,7 +29,7 @@ jobs:
           AZURE_TABLE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_TABLE_STORAGE_CONNECTION_STRING }}
         run: |
           echo "azure.table.storage.connection_string=${AZURE_TABLE_STORAGE_CONNECTION_STRING}" > src/main/resources/application-ci.properties
-          echo "azure.api_key=${{ secrets.BACKEND_API_KEY }}" >> src/main/resources/application-ci.properties
+          echo "azure.api_key=${BACKEND_API_KEY}" >> src/main/resources/application-ci.properties
           mvn clean install
 
       - name: Upload artifact for deployment job
