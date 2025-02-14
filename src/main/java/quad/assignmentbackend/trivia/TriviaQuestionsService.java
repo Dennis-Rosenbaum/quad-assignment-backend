@@ -1,5 +1,6 @@
 package quad.assignmentbackend.trivia;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
@@ -8,6 +9,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 import quad.assignmentbackend.exceptions.ExternalServiceException;
+import quad.assignmentbackend.trivia.data.QuestionTableStorageService;
 import quad.assignmentbackend.trivia.externalmodels.TriviaResponse;
 import quad.assignmentbackend.trivia.models.TriviaAnswer;
 import quad.assignmentbackend.trivia.models.TriviaQuestion;
@@ -18,7 +20,12 @@ import java.util.*;
 @Service
 public class TriviaQuestionsService {
 
-    private Dictionary<Integer, String> questions;
+    private final QuestionTableStorageService questionTableStorageService;
+
+    @Autowired
+    public TriviaQuestionsService(QuestionTableStorageService questionTableStorageService) {
+        this.questionTableStorageService = questionTableStorageService;
+    }
 
     private List<TriviaAnswer> constructAnswers(quad.assignmentbackend.trivia.externalmodels.TriviaQuestion question)
     {
@@ -35,7 +42,7 @@ public class TriviaQuestionsService {
     {
         String questionId = HashUtil.hashForId(question.question());
         String answerId = HashUtil.hashForId(question.correctAnswer());
-        //todo: store result in tableStorage
+        questionTableStorageService.insertEntity(questionId, answerId);
     }
 
     public List<TriviaQuestion> getQuestions(Integer count) {
@@ -75,7 +82,6 @@ public class TriviaQuestionsService {
     }
 
     public Boolean validateAnswer(String questionId, String answerId) {
-        //todo: check this against the database
-        return true;
+        return questionTableStorageService.entityExists(questionId, answerId);
     }
 }
