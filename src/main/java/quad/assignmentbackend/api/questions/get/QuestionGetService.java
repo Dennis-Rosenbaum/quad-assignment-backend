@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.questions.get;
+package quad.assignmentbackend.api.questions.get;
 
 import java.util.Dictionary;
 import java.util.List;

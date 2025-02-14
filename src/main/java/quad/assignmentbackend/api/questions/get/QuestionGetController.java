@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.questions.get;
+package quad.assignmentbackend.api.questions.get;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

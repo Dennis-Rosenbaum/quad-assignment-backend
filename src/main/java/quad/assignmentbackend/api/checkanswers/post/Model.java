@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.checkanswers.post;
+package quad.assignmentbackend.api.checkanswers.post;
 
 public class Model {
 

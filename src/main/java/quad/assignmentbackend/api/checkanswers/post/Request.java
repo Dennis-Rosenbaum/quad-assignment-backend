@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.checkanswers.post;
+package quad.assignmentbackend.api.checkanswers.post;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

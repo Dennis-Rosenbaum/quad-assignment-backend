@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.checkanswers.post;
+package quad.assignmentbackend.api.checkanswers.post;
 
 @org.springframework.stereotype.Service
 public class CheckanswersPostService {

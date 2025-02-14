@@ -8,11 +8,11 @@
         <version>3.4.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>quad-assessment-backend</artifactId>
+    <groupId>quad</groupId>
+    <artifactId>assignment-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>quad-assessment-backend</name>
-    <description>quad-assessment-backend</description>
+    <name>assignment-backend</name>
+    <description>assignment-backend</description>
     <url/>
     <licenses>
         <license/>

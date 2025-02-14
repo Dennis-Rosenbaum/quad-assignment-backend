@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.middleware;
+package quad.assignmentbackend.middleware;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

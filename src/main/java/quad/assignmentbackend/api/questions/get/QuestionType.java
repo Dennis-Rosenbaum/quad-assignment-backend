@@ -1,4 +1,4 @@
-package com.example.quadassessmentbackend.api.questions.get;
+package quad.assignmentbackend.api.questions.get;
 
 public enum QuestionType {
     MultipleChoice,
