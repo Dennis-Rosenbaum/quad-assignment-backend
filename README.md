@@ -5,6 +5,8 @@ This project is a simple REST API that allows you to get and check trivia questi
 /questions/{questionId}/answers/{answerId} (GET) - Checks if the answer with the specified question and answer combination is correct. An API key must be added (to the apiKey query) to ensure private access.
 /checkanswers (POST) - Same functionality as the previous endpoint, deprecated but still available as per specification
 
+For all endpoints, check out the swagger documentation: `http://localhost:8080/swagger-ui/index.html`
+
 ## Start the project
 1. Start of by cloning the project to your local machine.
 2. Add a file to the root directory of the project called `application.properties` with the content below.
