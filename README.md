@@ -1,9 +1,9 @@
 # Welcome to the assignment of Dennis Rosenbaum
 
 This project is a simple REST API that allows you to get and check trivia questions. The API provides the following endpoints:
-- /questions?count=1 (GET) - Returns a list of trivia questions. The count parameter (optional) specifies the number of questions to return.
-- /questions/{questionId}/answers/{answerId} (GET) - Checks if the answer with the specified question and answer combination is correct. An API key must be added (to the apiKey query) to ensure private access.
-- /checkanswers (POST) - Same functionality as the previous endpoint, deprecated but still available as per specification
+- `/questions?count=1` (GET) - Returns a list of trivia questions. The count parameter (optional) specifies the number of questions to return.
+- `/questions/{questionId}/answers/{answerId}` (GET) - Checks if the answer with the specified question and answer combination is correct. An API key must be added (to the apiKey query) to ensure private access.
+- `/checkanswers` (POST) - Same functionality as the previous endpoint, deprecated but still available as per specification
 
 For all endpoints, check out the swagger documentation: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
